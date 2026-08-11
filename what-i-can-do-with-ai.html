@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Что я умею с ИИ</title>
+  <style>
+    :root { --ink:#192327; --muted:#5f6b70; --paper:#f8f7f3; --card:#fff; --line:#d9dfdc; --mint:#cde8dd; --coral:#ffb39e; --sun:#f6df80; --blue:#cbdcf4; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.55 Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .page { width:min(1080px, calc(100% - 40px)); margin:auto; }
+    header { min-height:76vh; display:grid; align-content:center; padding:56px 0 44px; }
+    .eyebrow { letter-spacing:.12em; text-transform:uppercase; font-size:.75rem; font-weight:700; color:var(--muted); }
+    h1 { max-width:850px; font:500 clamp(3rem, 9vw, 7.4rem)/.94 Georgia, "Times New Roman", serif; margin:18px 0 24px; letter-spacing:-.055em; }
+    .lead { max-width:650px; margin:0; font-size:clamp(1.1rem, 2vw, 1.4rem); color:var(--muted); }
+    .tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:34px; }
+    .tags span { border:1px solid var(--line); border-radius:999px; padding:7px 12px; font-size:.9rem; background:#ffffffa6; }
+    section { padding:72px 0; border-top:1px solid var(--line); }
+    h2 { font:500 clamp(2rem, 4vw, 3.7rem)/1 Georgia, "Times New Roman", serif; letter-spacing:-.04em; margin:0 0 30px; }
+    .intro { max-width:700px; font-size:1.15rem; color:var(--muted); margin:0 0 34px; }
+    .grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:16px; }
+    article { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:26px; min-height:210px; display:flex; flex-direction:column; }
+    article:nth-child(4n+1) { border-top:8px solid var(--mint); } article:nth-child(4n+2) { border-top:8px solid var(--coral); } article:nth-child(4n+3) { border-top:8px solid var(--sun); } article:nth-child(4n+4) { border-top:8px solid var(--blue); }
+    h3 { margin:0 0 12px; font-size:1.18rem; }
+    article p { margin:0; color:var(--muted); }
+    .proof { margin-top:auto; padding-top:20px; font-size:.86rem; font-weight:700; color:#425157; }
+    .process { display:grid; grid-template-columns:repeat(4, 1fr); gap:0; margin-top:32px; }
+    .step { padding:20px; min-height:160px; border:1px solid var(--line); border-right:0; background:var(--card); }
+    .step:last-child { border-right:1px solid var(--line); }
+    .num { font:500 2.1rem/1 Georgia, serif; color:#74918a; }
+    .step strong { display:block; margin:22px 0 6px; }
+    .step span { font-size:.9rem; color:var(--muted); }
+    .checklist { display:grid; gap:12px; max-width:840px; }
+    .task { display:grid; grid-template-columns:auto 1fr; gap:14px; align-items:start; padding:17px 18px; background:var(--card); border:1px solid var(--line); border-radius:12px; }
+    .task input { width:21px; height:21px; margin:2px 0 0; accent-color:#496f66; cursor:pointer; }
+    .task strong { display:block; margin-bottom:3px; }
+    .task span { color:var(--muted); font-size:.94rem; }
+    .task.done { opacity:.62; }
+    .task.done strong { text-decoration:line-through; }
+    .progress-note { color:var(--muted); margin:0 0 22px; }
+    .closing { background:#243b39; color:#f7f5ed; border:0; margin:0 calc(50% - 50vw); padding:78px max(20px, calc((100vw - 1080px)/2)); }
+    .closing h2 { max-width:790px; margin-bottom:16px; }
+    .closing p { max-width:660px; margin:0; font-size:1.18rem; color:#d2dfda; }
+    footer { padding:28px 0 44px; color:var(--muted); font-size:.88rem; }
+    @media (max-width:680px) { .page{width:min(100% - 28px,1080px)} header{min-height:66vh}.grid{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}.step{border-right:1px solid var(--line);border-bottom:0}.step:nth-last-child(-n+2){border-bottom:1px solid var(--line)} }
+    @media (max-width:420px) { .process{grid-template-columns:1fr}.step{border-bottom:0}.step:last-child{border-bottom:1px solid var(--line)} }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="page">
+      <div class="eyebrow">Практика с ChatGPT, Codex и ИИ-инструментами</div>
+      <h1>Я умею превращать ИИ в рабочий инструмент.</h1>
+      <p class="lead">Не просто получать ответы в чате, а ставить задачи, собирать результат, проверять его и превращать в материалы для реальной работы.</p>
+      <div class="tags"><span>ChatGPT</span><span>Codex</span><span>ИИ-агенты</span><span>документы</span><span>презентации</span><span>лендинги</span><span>боты</span></div>
+    </header>
+
+    <section class="page">
+      <h2>Что я уже делаю</h2>
+      <p class="intro">Эти навыки подтверждаются практическими проектами и историей работы с ИИ: планировщиком встреч, материалами по маркетингу, лендингами, презентациями, саммари и Telegram-ботом.</p>
+      <div class="grid">
+        <article><h3>Формулирую задачу для ИИ</h3><p>Разбиваю большую цель на понятные этапы, задаю контекст, ограничения и критерии результата. Уточняю задачу, если исходных данных недостаточно.</p><div class="proof">От идеи — к ясному брифу и плану действий</div></article>
+        <article><h3>Работаю с ChatGPT осмысленно</h3><p>Использую его для анализа, структуры, редакторской работы, сценариев и решений. Не принимаю первый вариант автоматически: проверяю логику и дорабатываю.</p><div class="proof">ИИ как партнёр по мышлению, а не «генератор текста»</div></article>
+        <article><h3>Создаю проекты с Codex</h3><p>Могу вести задачу от концепции до работающего результата: обсуждать архитектуру, работать с файлами, тестировать и улучшать готовое решение.</p><div class="proof">Практика на Meeting Planner Agent</div></article>
+        <article><h3>Собираю цифровые продукты</h3><p>Делаю лендинги и простые сервисы, понимаю ценность прототипа и умею доводить его до результата, который можно показать или использовать.</p><div class="proof">Проекты по разработке лендингов</div></article>
+        <article><h3>Готовлю презентации</h3><p>Превращаю материал в понятную структуру: выбираю логику рассказа, акценты и форму подачи. Использую ИИ для ускорения, а не вместо смысла.</p><div class="proof">Практика на рабочих презентациях</div></article>
+        <article><h3>Делаю саммари и анализ встреч</h3><p>Выделяю главное из видео, расшифровок и обсуждений: темы, решения, риски, следующие шаги. Оформляю результат так, чтобы по нему можно было действовать.</p><div class="proof">Саммари видео и встреч</div></article>
+        <article><h3>Проверяю маркетинговые гипотезы</h3><p>Помогаю превратить гипотезу в план проверки: цель, аудитория, способ измерения и критерии решения. Это уменьшает риск «делать на ощущениях».</p><div class="proof">Материалы по маркетинговым гипотезам</div></article>
+        <article><h3>Осваиваю ИИ-инструменты дальше</h3><p>Разбираюсь в навыках, коннекторах, автоматизациях и агентах. Сохраняю знания в понятные рабочие сценарии, а не в разрозненные заметки.</p><div class="proof">Курс и собственная библиотека навыков</div></article>
+      </div>
+    </section>
+
+    <section class="page">
+      <h2>Как я работаю с ИИ</h2>
+      <p class="intro">Мой подход — не «попросить и надеяться», а управлять процессом: от цели до проверяемого результата.</p>
+      <div class="process">
+        <div class="step"><div class="num">01</div><strong>Определяю цель</strong><span>Что должно измениться и кому это нужно</span></div>
+        <div class="step"><div class="num">02</div><strong>Даю контекст</strong><span>Факты, ограничения, исходные материалы</span></div>
+        <div class="step"><div class="num">03</div><strong>Собираю результат</strong><span>Текст, документ, код, план или прототип</span></div>
+        <div class="step"><div class="num">04</div><strong>Проверяю и улучшаю</strong><span>Логика, точность, применимость и качество</span></div>
+      </div>
+    </section>
+
+    <section class="page">
+      <h2>План развития</h2>
+      <p class="intro">Отмечаю не просмотренные уроки, а навыки, которые проверила на реальной или учебной задаче. Можно возвращаться к списку и менять отметки.</p>
+      <p class="progress-note" id="progress-note" aria-live="polite">Выполнено: 0 из 16</p>
+      <div class="checklist" id="checklist">
+        <label class="task"><input type="checkbox" data-task="instructions"><span><strong>Кастомные инструкции</strong>Обновить личные инструкции для ChatGPT и проверить их на рабочей задаче.</span></label>
+        <label class="task"><input type="checkbox" data-task="project-folder"><span><strong>Агент и папка проекта</strong>Собрать небольшую папку с описанием задачи и исходными материалами.</span></label>
+        <label class="task"><input type="checkbox" data-task="external-context"><span><strong>Внешний контекст</strong>Дать агенту документ или таблицу и получить проверяемый результат.</span></label>
+        <label class="task"><input type="checkbox" data-task="connectors"><span><strong>Коннекторы</strong>Выполнить одно безопасное действие через подключённый рабочий инструмент.</span></label>
+        <label class="task"><input type="checkbox" data-task="planning"><span><strong>Планирование</strong>Разложить сложную задачу на этапы и критерии готовности.</span></label>
+        <label class="task"><input type="checkbox" data-task="skills"><span><strong>Готовые скиллы</strong>Применить навык в реальной задаче.</span></label>
+        <label class="task"><input type="checkbox" data-task="own-skill"><span><strong>Свой скилл</strong>Создать или улучшить личный навык под повторяющуюся работу.</span></label>
+        <label class="task"><input type="checkbox" data-task="design"><span><strong>Референсы и дизайн</strong>Собрать небольшой визуальный материал по референсу.</span></label>
+        <label class="task"><input type="checkbox" data-task="bot"><span><strong>Telegram-бот</strong>Запустить или улучшить учебного бота.</span></label>
+        <label class="task"><input type="checkbox" data-task="memory"><span><strong>Контекст и память</strong>Организовать задачу так, чтобы к ней можно было вернуться после перерыва.</span></label>
+        <label class="task"><input type="checkbox" data-task="automation"><span><strong>Автоматизация задач</strong>Пройти микроквест и автоматизировать одну повторяющуюся задачу.</span></label>
+        <label class="task"><input type="checkbox" data-task="git"><span><strong>Git</strong>Сохранить один проект с понятной историей изменений.</span></label>
+        <label class="task"><input type="checkbox" data-task="cowork"><span><strong>Cowork и файлы</strong>Обработать папку документов и получить структурированный результат.</span></label>
+        <label class="task"><input type="checkbox" data-task="notebooklm"><span><strong>NotebookLM или аналог</strong>Визуализировать большой набор материалов.</span></label>
+        <label class="task"><input type="checkbox" data-task="other-agents"><span><strong>Cursor и Claude</strong>Сравнить их с Codex на одной небольшой задаче.</span></label>
+        <label class="task"><input type="checkbox" data-task="voice"><span><strong>Голосовой сценарий</strong>Выполнить рабочую задачу голосом от постановки до результата.</span></label>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="page"><h2>Главное: я умею ставить ИИ на службу задаче.</h2><p>Могу самостоятельно разобраться в новом инструменте, использовать его бережно и критически, а затем превратить результат в понятный следующий шаг для работы.</p></div>
+    </section>
+  </main>
+  <footer class="page">Личный рабочий профиль · август 2026</footer>
+  <script>
+    (() => {
+      const key = 'what-i-can-do-ai-plan-v1';
+      const tasks = [...document.querySelectorAll('[data-task]')];
+      const note = document.getElementById('progress-note');
+      let saved = {};
+      try { saved = JSON.parse(localStorage.getItem(key) || '{}'); } catch (_) {}
+      const update = () => {
+        const state = {};
+        let complete = 0;
+        tasks.forEach((box) => {
+          state[box.dataset.task] = box.checked;
+          box.closest('.task').classList.toggle('done', box.checked);
+          if (box.checked) complete += 1;
+        });
+        note.textContent = `Выполнено: ${complete} из ${tasks.length}`;
+        try { localStorage.setItem(key, JSON.stringify(state)); } catch (_) {}
+      };
+      tasks.forEach((box) => { box.checked = Boolean(saved[box.dataset.task]); box.addEventListener('change', update); });
+      update();
+    })();
+  </script>
+</body>
+</html>
