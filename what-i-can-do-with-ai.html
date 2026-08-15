@@ -3,134 +3,126 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Что я умею с ИИ</title>
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Что я умею с ИИ — план развития</title>
   <style>
-    :root { --ink:#192327; --muted:#5f6b70; --paper:#f8f7f3; --card:#fff; --line:#d9dfdc; --mint:#cde8dd; --coral:#ffb39e; --sun:#f6df80; --blue:#cbdcf4; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.55 Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
-    .page { width:min(1080px, calc(100% - 40px)); margin:auto; }
-    header { min-height:76vh; display:grid; align-content:center; padding:56px 0 44px; }
-    .eyebrow { letter-spacing:.12em; text-transform:uppercase; font-size:.75rem; font-weight:700; color:var(--muted); }
-    h1 { max-width:850px; font:500 clamp(3rem, 9vw, 7.4rem)/.94 Georgia, "Times New Roman", serif; margin:18px 0 24px; letter-spacing:-.055em; }
-    .lead { max-width:650px; margin:0; font-size:clamp(1.1rem, 2vw, 1.4rem); color:var(--muted); }
-    .tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:34px; }
-    .tags span { border:1px solid var(--line); border-radius:999px; padding:7px 12px; font-size:.9rem; background:#ffffffa6; }
-    section { padding:72px 0; border-top:1px solid var(--line); }
-    h2 { font:500 clamp(2rem, 4vw, 3.7rem)/1 Georgia, "Times New Roman", serif; letter-spacing:-.04em; margin:0 0 30px; }
-    .intro { max-width:700px; font-size:1.15rem; color:var(--muted); margin:0 0 34px; }
-    .grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:16px; }
-    article { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:26px; min-height:210px; display:flex; flex-direction:column; }
-    article:nth-child(4n+1) { border-top:8px solid var(--mint); } article:nth-child(4n+2) { border-top:8px solid var(--coral); } article:nth-child(4n+3) { border-top:8px solid var(--sun); } article:nth-child(4n+4) { border-top:8px solid var(--blue); }
-    h3 { margin:0 0 12px; font-size:1.18rem; }
-    article p { margin:0; color:var(--muted); }
-    .proof { margin-top:auto; padding-top:20px; font-size:.86rem; font-weight:700; color:#425157; }
-    .process { display:grid; grid-template-columns:repeat(4, 1fr); gap:0; margin-top:32px; }
-    .step { padding:20px; min-height:160px; border:1px solid var(--line); border-right:0; background:var(--card); }
-    .step:last-child { border-right:1px solid var(--line); }
-    .num { font:500 2.1rem/1 Georgia, serif; color:#74918a; }
-    .step strong { display:block; margin:22px 0 6px; }
-    .step span { font-size:.9rem; color:var(--muted); }
-    .checklist { display:grid; gap:12px; max-width:840px; }
-    .task { display:grid; grid-template-columns:auto 1fr; gap:14px; align-items:start; padding:17px 18px; background:var(--card); border:1px solid var(--line); border-radius:12px; }
-    .task input { width:21px; height:21px; margin:2px 0 0; accent-color:#496f66; cursor:pointer; }
-    .task strong { display:block; margin-bottom:3px; }
-    .task span { color:var(--muted); font-size:.94rem; }
-    .task.done { opacity:.62; }
-    .task.done strong { text-decoration:line-through; }
-    .progress-note { color:var(--muted); margin:0 0 22px; }
-    .closing { background:#243b39; color:#f7f5ed; border:0; margin:0 calc(50% - 50vw); padding:78px max(20px, calc((100vw - 1080px)/2)); }
-    .closing h2 { max-width:790px; margin-bottom:16px; }
-    .closing p { max-width:660px; margin:0; font-size:1.18rem; color:#d2dfda; }
-    footer { padding:28px 0 44px; color:var(--muted); font-size:.88rem; }
-    @media (max-width:680px) { .page{width:min(100% - 28px,1080px)} header{min-height:66vh}.grid{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}.step{border-right:1px solid var(--line);border-bottom:0}.step:nth-last-child(-n+2){border-bottom:1px solid var(--line)} }
-    @media (max-width:420px) { .process{grid-template-columns:1fr}.step{border-bottom:0}.step:last-child{border-bottom:1px solid var(--line)} }
+    :root{--ink:#1d2928;--muted:#62706e;--paper:#f6f5f0;--card:#fff;--line:#d8dedb;--green:#dcefe5;--green2:#31705d;--yellow:#fff0b8;--yellow2:#806211;--violet:#e8e0f6;--violet2:#664a8e;--blue:#dcebf6;--blue2:#376b8e}
+    *{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}.page{width:min(1080px,calc(100% - 36px));margin:auto}
+    header{padding:72px 0 52px}.eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:.76rem;font-weight:750;color:var(--muted)}h1{max-width:900px;font:500 clamp(3rem,8vw,6.8rem)/.96 Georgia,serif;margin:16px 0 22px;letter-spacing:-.05em}.lead{max-width:760px;font-size:1.2rem;color:var(--muted)}
+    .summary{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}.summary span{padding:8px 13px;border:1px solid var(--line);border-radius:999px;background:#ffffffa8;font-size:.9rem}
+    .notice{margin:4px 0 42px;padding:18px 20px;border-left:5px solid #4d7b70;background:#fff;border-radius:0 14px 14px 0;color:#465451}.notice strong{color:var(--ink)}
+    .roadmap{display:grid;gap:22px;padding-bottom:70px}.track{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--card)}.track-head{padding:24px 26px 20px}.track-head h2{font:500 clamp(1.75rem,3.4vw,2.8rem)/1.05 Georgia,serif;margin:5px 0 9px;letter-spacing:-.03em}.track-head p{margin:0;max-width:760px;color:#4e5e5a}.track-kicker{text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;font-weight:800}.green .track-head{background:var(--green)}.green .track-kicker{color:var(--green2)}.yellow .track-head{background:var(--yellow)}.yellow .track-kicker{color:var(--yellow2)}.violet .track-head{background:var(--violet)}.violet .track-kicker{color:var(--violet2)}.blue .track-head{background:var(--blue)}.blue .track-kicker{color:var(--blue2)}
+    .tasks{display:grid;grid-template-columns:repeat(2,1fr);gap:0}.task{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:15px;padding:18px 22px;border-top:1px solid var(--line)}.task:nth-child(odd){border-right:1px solid var(--line)}.task-copy strong{display:block;margin-bottom:3px}.task-copy{display:block;color:var(--muted);font-size:.92rem}.marks{display:grid;gap:7px;min-width:112px}.marks label{display:flex;align-items:center;gap:7px;cursor:pointer;font-size:.76rem;color:var(--muted);white-space:nowrap}.marks input{width:18px;height:18px;margin:0;cursor:pointer}.green input{accent-color:var(--green2)}.yellow input{accent-color:var(--yellow2)}.violet input{accent-color:var(--violet2)}.blue input{accent-color:var(--blue2)}.task.material-done .material-mark span,.task.skill-done .skill-mark span{color:var(--ink);font-weight:700}.task.done{opacity:.58}.task.done strong{text-decoration:line-through}
+    .next{margin:0 calc(50% - 50vw);padding:66px max(18px,calc((100vw - 1080px)/2));background:#263d39;color:#f7f5ed}.next h2{font:500 clamp(2rem,4vw,3.5rem)/1 Georgia,serif;margin:0 0 15px}.next p{max-width:780px;color:#d4dfdc;margin:0 0 22px}.next ol{margin:0;padding-left:1.35rem;max-width:780px}.next li{padding:5px 0}footer{padding:28px 0 42px;color:var(--muted);font-size:.88rem}
+    @media(max-width:700px){.tasks{grid-template-columns:1fr}.task:nth-child(odd){border-right:0}header{padding-top:50px}}@media(max-width:440px){.task{grid-template-columns:1fr}.marks{grid-template-columns:repeat(2,minmax(0,1fr));min-width:0}.marks label{white-space:normal}}
   </style>
 </head>
 <body>
-  <main>
-    <header class="page">
-      <div class="eyebrow">Практика с ChatGPT, Codex и ИИ-инструментами</div>
-      <h1>Я умею превращать ИИ в рабочий инструмент.</h1>
-      <p class="lead">Не просто получать ответы в чате, а ставить задачи, собирать результат, проверять его и превращать в материалы для реальной работы.</p>
-      <div class="tags"><span>ChatGPT</span><span>Codex</span><span>ИИ-агенты</span><span>документы</span><span>презентации</span><span>лендинги</span><span>боты</span></div>
+  <main class="page">
+    <header>
+      <div class="eyebrow">Личный маршрут обучения · август 2026</div>
+      <h1>Что я умею с ИИ</h1>
+      <p class="lead">Не перечень просмотренных уроков, а живая карта навыков: что уже знакомо, что нужно подтвердить практикой и куда двигаться дальше.</p>
+      <div class="summary"><span>Курс: gconf#14 vibe-coding</span><span>Фокус: работа и повседневные задачи</span><span>Подход: маленькие проверяемые кейсы</span></div>
     </header>
+    <div class="notice"><strong>Правило прогресса.</strong> Отметка «пройдено» означает, что материал просмотрен. Навык считается подтверждённым только после самостоятельного результата в реальной или учебной задаче.</div>
 
-    <section class="page">
-      <h2>Что я уже делаю</h2>
-      <p class="intro">Эти навыки подтверждаются практическими проектами и историей работы с ИИ: планировщиком встреч, материалами по маркетингу, лендингами, презентациями, саммари и Telegram-ботом.</p>
-      <div class="grid">
-        <article><h3>Формулирую задачу для ИИ</h3><p>Разбиваю большую цель на понятные этапы, задаю контекст, ограничения и критерии результата. Уточняю задачу, если исходных данных недостаточно.</p><div class="proof">От идеи — к ясному брифу и плану действий</div></article>
-        <article><h3>Работаю с ChatGPT осмысленно</h3><p>Использую его для анализа, структуры, редакторской работы, сценариев и решений. Не принимаю первый вариант автоматически: проверяю логику и дорабатываю.</p><div class="proof">ИИ как партнёр по мышлению, а не «генератор текста»</div></article>
-        <article><h3>Создаю проекты с Codex</h3><p>Могу вести задачу от концепции до работающего результата: обсуждать архитектуру, работать с файлами, тестировать и улучшать готовое решение.</p><div class="proof">Практика на Meeting Planner Agent</div></article>
-        <article><h3>Собираю цифровые продукты</h3><p>Делаю лендинги и простые сервисы, понимаю ценность прототипа и умею доводить его до результата, который можно показать или использовать.</p><div class="proof">Проекты по разработке лендингов</div></article>
-        <article><h3>Готовлю презентации</h3><p>Превращаю материал в понятную структуру: выбираю логику рассказа, акценты и форму подачи. Использую ИИ для ускорения, а не вместо смысла.</p><div class="proof">Практика на рабочих презентациях</div></article>
-        <article><h3>Делаю саммари и анализ встреч</h3><p>Выделяю главное из видео, расшифровок и обсуждений: темы, решения, риски, следующие шаги. Оформляю результат так, чтобы по нему можно было действовать.</p><div class="proof">Саммари видео и встреч</div></article>
-        <article><h3>Проверяю маркетинговые гипотезы</h3><p>Помогаю превратить гипотезу в план проверки: цель, аудитория, способ измерения и критерии решения. Это уменьшает риск «делать на ощущениях».</p><div class="proof">Материалы по маркетинговым гипотезам</div></article>
-        <article><h3>Осваиваю ИИ-инструменты дальше</h3><p>Разбираюсь в навыках, коннекторах, автоматизациях и агентах. Сохраняю знания в понятные рабочие сценарии, а не в разрозненные заметки.</p><div class="proof">Курс и собственная библиотека навыков</div></article>
-      </div>
-    </section>
+    <div class="roadmap">
+      <section class="track green">
+        <div class="track-head"><div class="track-kicker">Раздел 1 · Проверка навыков</div><h2>Что я уже знаю</h2><p>Темы курса знакомы. Для каждой — один короткий кейс без пошаговой подсказки; после успешной проверки можно оставить галочку.</p></div>
+        <div class="tasks">
+          <label class="task"><input type="checkbox" data-task="instructions"><span><strong>Кастомные инструкции</strong>Обновить инструкции и проверить их на рабочем запросе.</span></label>
+          <label class="task"><input type="checkbox" data-task="project-folder"><span><strong>Агент и папка проекта</strong>Создать понятную структуру задачи и файлов-источников.</span></label>
+          <label class="task"><input type="checkbox" data-task="external-context"><span><strong>Внешний контекст</strong>Получить проверяемый результат по документу или таблице.</span></label>
+          <label class="task"><input type="checkbox" data-task="planning"><span><strong>Планирование и цели</strong>Разложить сложную задачу на этапы и критерии готовности.</span></label>
+          <label class="task"><input type="checkbox" data-task="connectors"><span><strong>Коннекторы и внешние инструменты</strong>Сначала чтение или черновик; перед изменением данных — подтверждение.</span></label>
+          <label class="task"><input type="checkbox" data-task="skills"><span><strong>Готовые скиллы</strong>Применить подходящий скилл в реальной задаче и проверить результат.</span></label>
+          <label class="task"><input type="checkbox" data-task="own-skill"><span><strong>Свой скилл</strong>Доработать один повторяемый рабочий сценарий.</span></label>
+          <label class="task"><input type="checkbox" data-task="automation"><span><strong>Автоматизация</strong>Настроить повторяемую задачу и проверить её вручную.</span></label>
+          <label class="task"><input type="checkbox" data-task="bot"><span><strong>Telegram-бот</strong>Запустить или улучшить учебного бота.</span></label>
+          <label class="task"><input type="checkbox" data-task="browser" checked><span><strong>Браузер — подтверждено</strong>Chrome подключён, LMS открыт и просмотрен вместе с Codex.</span></label>
+          <label class="task"><input type="checkbox" data-task="subagents"><span><strong>Субагенты</strong>Разбить большую задачу на независимые части и выполнить их параллельно.</span></label>
+          <label class="task"><input type="checkbox" data-task="memory"><span><strong>Контекст и память</strong>Сохранить состояние задачи так, чтобы продолжить после перерыва.</span></label>
+          <label class="task"><input type="checkbox" data-task="design"><span><strong>Дизайн по референсу</strong>Собрать небольшой визуальный материал и сравнить с образцом.</span></label>
+        </div>
+      </section>
 
-    <section class="page">
-      <h2>Как я работаю с ИИ</h2>
-      <p class="intro">Мой подход — не «попросить и надеяться», а управлять процессом: от цели до проверяемого результата.</p>
-      <div class="process">
-        <div class="step"><div class="num">01</div><strong>Определяю цель</strong><span>Что должно измениться и кому это нужно</span></div>
-        <div class="step"><div class="num">02</div><strong>Даю контекст</strong><span>Факты, ограничения, исходные материалы</span></div>
-        <div class="step"><div class="num">03</div><strong>Собираю результат</strong><span>Текст, документ, код, план или прототип</span></div>
-        <div class="step"><div class="num">04</div><strong>Проверяю и улучшаю</strong><span>Логика, точность, применимость и качество</span></div>
-      </div>
-    </section>
+      <section class="track yellow">
+        <div class="track-head"><div class="track-kicker">Раздел 2 · Ближайший приоритет</div><h2>Что нужно доизучить</h2><p>Сначала закрываем практические пробелы курса, которые сильнее всего влияют на самостоятельную и безопасную работу.</p></div>
+        <div class="tasks">
+          <label class="task"><input type="checkbox" data-task="agent-safety"><span><strong>Безопасность агента</strong>Права доступа, границы действий, тестовые данные и подтверждения.</span></label>
+          <label class="task"><input type="checkbox" data-task="codex-app"><span><strong>Возможности приложения Codex</strong>Задачи, файлы, браузер, навыки и контроль результата.</span></label>
+          <label class="task"><input type="checkbox" data-task="cowork"><span><strong>Cowork и работа с файлами</strong>Обработать папку документов и получить структурированный результат.</span></label>
+          <label class="task"><input type="checkbox" data-task="git"><span><strong>Git на практике</strong>Сохранить один проект с понятной историей изменений.</span></label>
+          <label class="task"><input type="checkbox" data-task="task-framework"><span><strong>Фреймворк постановки задач</strong>Цель, контекст, ограничения, результат и критерии проверки.</span></label>
+          <label class="task"><input type="checkbox" data-task="voice"><span><strong>Голосовой сценарий</strong>Провести рабочую задачу голосом от постановки до результата.</span></label>
+          <label class="task"><input type="checkbox" data-task="notebooklm"><span><strong>NotebookLM или аналог</strong>Разобрать и визуализировать большой набор материалов.</span></label>
+          <label class="task"><input type="checkbox" data-task="idea-result"><span><strong>Путь «идея → результат»</strong>Собрать небольшой законченный проект с проверкой качества.</span></label>
+        </div>
+      </section>
 
-    <section class="page">
-      <h2>План развития</h2>
-      <p class="intro">Отмечаю не просмотренные уроки, а навыки, которые проверила на реальной или учебной задаче. Можно возвращаться к списку и менять отметки.</p>
-      <p class="progress-note" id="progress-note" aria-live="polite">Выполнено: 0 из 16</p>
-      <div class="checklist" id="checklist">
-        <label class="task"><input type="checkbox" data-task="instructions"><span><strong>Кастомные инструкции</strong>Обновить личные инструкции для ChatGPT и проверить их на рабочей задаче.</span></label>
-        <label class="task"><input type="checkbox" data-task="project-folder"><span><strong>Агент и папка проекта</strong>Собрать небольшую папку с описанием задачи и исходными материалами.</span></label>
-        <label class="task"><input type="checkbox" data-task="external-context"><span><strong>Внешний контекст</strong>Дать агенту документ или таблицу и получить проверяемый результат.</span></label>
-        <label class="task"><input type="checkbox" data-task="connectors"><span><strong>Коннекторы</strong>Выполнить одно безопасное действие через подключённый рабочий инструмент.</span></label>
-        <label class="task"><input type="checkbox" data-task="planning"><span><strong>Планирование</strong>Разложить сложную задачу на этапы и критерии готовности.</span></label>
-        <label class="task"><input type="checkbox" data-task="skills"><span><strong>Готовые скиллы</strong>Применить навык в реальной задаче.</span></label>
-        <label class="task"><input type="checkbox" data-task="own-skill"><span><strong>Свой скилл</strong>Создать или улучшить личный навык под повторяющуюся работу.</span></label>
-        <label class="task"><input type="checkbox" data-task="design"><span><strong>Референсы и дизайн</strong>Собрать небольшой визуальный материал по референсу.</span></label>
-        <label class="task"><input type="checkbox" data-task="bot"><span><strong>Telegram-бот</strong>Запустить или улучшить учебного бота.</span></label>
-        <label class="task"><input type="checkbox" data-task="memory"><span><strong>Контекст и память</strong>Организовать задачу так, чтобы к ней можно было вернуться после перерыва.</span></label>
-        <label class="task"><input type="checkbox" data-task="automation"><span><strong>Автоматизация задач</strong>Пройти микроквест и автоматизировать одну повторяющуюся задачу.</span></label>
-        <label class="task"><input type="checkbox" data-task="git"><span><strong>Git</strong>Сохранить один проект с понятной историей изменений.</span></label>
-        <label class="task"><input type="checkbox" data-task="cowork"><span><strong>Cowork и файлы</strong>Обработать папку документов и получить структурированный результат.</span></label>
-        <label class="task"><input type="checkbox" data-task="notebooklm"><span><strong>NotebookLM или аналог</strong>Визуализировать большой набор материалов.</span></label>
-        <label class="task"><input type="checkbox" data-task="other-agents"><span><strong>Cursor и Claude</strong>Сравнить их с Codex на одной небольшой задаче.</span></label>
-        <label class="task"><input type="checkbox" data-task="voice"><span><strong>Голосовой сценарий</strong>Выполнить рабочую задачу голосом от постановки до результата.</span></label>
-      </div>
-    </section>
+      <section class="track violet">
+        <div class="track-head"><div class="track-kicker">Раздел 3 · Персональные помощники</div><h2>Что освоить про ассистентов</h2><p>Цель — не изучить все инструменты, а запустить одного полезного помощника для регулярной задачи с понятными ограничениями.</p></div>
+        <div class="tasks">
+          <label class="task"><input type="checkbox" data-task="assistant-model"><span><strong>Чат, агент, автоматизация, ассистент</strong>Понять различия и выбрать подходящий формат для задачи.</span></label>
+          <label class="task"><input type="checkbox" data-task="assistant-scenarios"><span><strong>Сценарии ассистента</strong>Выбрать одну частую задачу с измеримой пользой.</span></label>
+          <label class="task"><input type="checkbox" data-task="hermes"><span><strong>Hermes</strong>Разобрать назначение, требования, сильные стороны и ограничения.</span></label>
+          <label class="task"><input type="checkbox" data-task="openclaw"><span><strong>OpenClaw</strong>Изучить возможности и сравнить с Hermes на одном сценарии.</span></label>
+          <label class="task"><input type="checkbox" data-task="assistant-security"><span><strong>Безопасность и доступы</strong>Минимальные права, журнал действий, секреты и запрет действий без подтверждения.</span></label>
+          <label class="task"><input type="checkbox" data-task="assistant-test"><span><strong>Безопасный тест</strong>Запустить выбранный вариант на копиях или учебных данных.</span></label>
+          <label class="task"><input type="checkbox" data-task="assistant-telegram"><span><strong>Интерфейс в Telegram</strong>Подключить только после локальной проверки сценария.</span></label>
+          <label class="task"><input type="checkbox" data-task="assistant-daily"><span><strong>Один ежедневный помощник</strong>Проверить пользу в реальной работе и решить, оставлять ли его.</span></label>
+        </div>
+      </section>
 
-    <section class="closing">
-      <div class="page"><h2>Главное: я умею ставить ИИ на службу задаче.</h2><p>Могу самостоятельно разобраться в новом инструменте, использовать его бережно и критически, а затем превратить результат в понятный следующий шаг для работы.</p></div>
-    </section>
+      <section class="track blue">
+        <div class="track-head"><div class="track-kicker">Раздел 4 · После основного маршрута</div><h2>Что изучить дополнительно</h2><p>Эти темы полезны, но не должны отвлекать от закрепления Codex, автоматизации и первого ассистента.</p></div>
+        <div class="tasks">
+          <label class="task"><input type="checkbox" data-task="claude-compare"><span><strong>Claude — только сравнение</strong>Один небольшой тест с Codex; глубокое изучение — лишь при явном преимуществе.</span></label>
+          <label class="task"><input type="checkbox" data-task="cursor"><span><strong>Cursor</strong>Вернуться, если программирование станет отдельным приоритетом.</span></label>
+          <label class="task"><input type="checkbox" data-task="publishing"><span><strong>Публикация приложений</strong>Разобрать хостинг, домен, обновления и безопасный выпуск.</span></label>
+          <label class="task"><input type="checkbox" data-task="applied-cases"><span><strong>Прикладные кейсы</strong>Документы, встречи, маркетинг, дизайн и анализ информации.</span></label>
+        </div>
+      </section>
+    </div>
+
+    <section class="next"><h2>Следующий шаг</h2><p>Провести серию коротких проверочных кейсов, зафиксировать статус каждого навыка и только затем составить календарь изучения оставшихся тем.</p><ol><li>Выбрать 3–4 навыка для первой проверки.</li><li>Выполнить кейсы самостоятельно, с ограниченным числом подсказок.</li><li>Отметить: «умею», «пробовала», «только знаю» или «не проходила».</li><li>Запланировать приоритетные материалы и первый безопасный сценарий ассистента.</li></ol></section>
+    <footer>Личная карта развития навыков работы с ИИ · отметки сохраняются в этом браузере</footer>
   </main>
-  <footer class="page">Личный рабочий профиль · август 2026</footer>
   <script>
-    (() => {
-      const key = 'what-i-can-do-ai-plan-v1';
-      const tasks = [...document.querySelectorAll('[data-task]')];
-      const note = document.getElementById('progress-note');
-      let saved = {};
-      try { saved = JSON.parse(localStorage.getItem(key) || '{}'); } catch (_) {}
-      const update = () => {
-        const state = {};
-        let complete = 0;
-        tasks.forEach((box) => {
-          state[box.dataset.task] = box.checked;
-          box.closest('.task').classList.toggle('done', box.checked);
-          if (box.checked) complete += 1;
-        });
-        note.textContent = `Выполнено: ${complete} из ${tasks.length}`;
-        try { localStorage.setItem(key, JSON.stringify(state)); } catch (_) {}
-      };
-      tasks.forEach((box) => { box.checked = Boolean(saved[box.dataset.task]); box.addEventListener('change', update); });
-      update();
-    })();
+    const storageKey='what-i-can-do-ai-plan-v3';
+    const legacyKeys=['what-i-can-do-ai-plan-v2','what-i-can-do-ai-plan-v1'];
+    let saved={material:{},skill:{}};
+    try{
+      const current=JSON.parse(localStorage.getItem(storageKey)||'null');
+      if(current&&current.material&&current.skill){saved=current}else{
+        const legacy=JSON.parse(legacyKeys.map(key=>localStorage.getItem(key)).find(Boolean)||'{}');
+        saved.material=legacy;
+      }
+    }catch(e){}
+    const save=()=>{const state={material:{},skill:{}};document.querySelectorAll('[data-material]').forEach(x=>state.material[x.dataset.material]=x.checked);document.querySelectorAll('[data-skill]').forEach(x=>state.skill[x.dataset.skill]=x.checked);try{localStorage.setItem(storageKey,JSON.stringify(state))}catch(e){}};
+    document.querySelectorAll('[data-task]').forEach(materialBox=>{
+      const key=materialBox.dataset.task;
+      const oldRow=materialBox.closest('.task');
+      const copy=oldRow.querySelector('span');
+      const row=document.createElement('article'); row.className='task';
+      copy.className='task-copy'; row.appendChild(copy);
+      materialBox.removeAttribute('data-task'); materialBox.dataset.material=key;
+      if(Object.prototype.hasOwnProperty.call(saved.material,key))materialBox.checked=!!saved.material[key];
+      const materialLabel=document.createElement('label'); materialLabel.className='material-mark';
+      const materialText=document.createElement('span'); materialText.textContent='Материал пройден';
+      materialLabel.append(materialBox,materialText);
+      const skillBox=document.createElement('input'); skillBox.type='checkbox'; skillBox.dataset.skill=key;
+      skillBox.checked=Object.prototype.hasOwnProperty.call(saved.skill,key)?!!saved.skill[key]:key==='browser';
+      const skillLabel=document.createElement('label'); skillLabel.className='skill-mark';
+      const skillText=document.createElement('span'); skillText.textContent='Навык проверен';
+      skillLabel.append(skillBox,skillText);
+      const marks=document.createElement('div'); marks.className='marks'; marks.append(materialLabel,skillLabel); row.appendChild(marks);
+      oldRow.replaceWith(row);
+      const paint=()=>{row.classList.toggle('material-done',materialBox.checked);row.classList.toggle('skill-done',skillBox.checked);row.classList.toggle('done',materialBox.checked&&skillBox.checked)};
+      materialBox.addEventListener('change',()=>{paint();save()});skillBox.addEventListener('change',()=>{paint();save()});paint();
+    });
   </script>
 </body>
 </html>
