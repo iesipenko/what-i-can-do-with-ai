@@ -35,7 +35,7 @@
           <label class="task"><input type="checkbox" data-task="instructions"><span><strong>Кастомные инструкции</strong>Обновить инструкции и проверить их на рабочем запросе.</span></label>
           <label class="task"><input type="checkbox" data-task="project-folder"><span><strong>Агент и папка проекта</strong>Создать понятную структуру задачи и файлов-источников.</span></label>
           <label class="task"><input type="checkbox" data-task="external-context"><span><strong>Внешний контекст</strong>Получить проверяемый результат по документу или таблице.</span></label>
-          <label class="task"><input type="checkbox" data-task="planning"><span><strong>Планирование и цели</strong>Разложить сложную задачу на этапы и критерии готовности.</span></label>
+          <label class="task"><input type="checkbox" data-task="planning" checked><span><strong>Планирование и постановка задачи — 89%</strong>Материал пройден, навык подтверждён: цель, источники, результат, критерии проверки и порядок подтверждений определены.</span></label>
           <label class="task"><input type="checkbox" data-task="connectors"><span><strong>Коннекторы и внешние инструменты</strong>Сначала чтение или черновик; перед изменением данных — подтверждение.</span></label>
           <label class="task"><input type="checkbox" data-task="skills"><span><strong>Готовые скиллы</strong>Применить подходящий скилл в реальной задаче и проверить результат.</span></label>
           <label class="task"><input type="checkbox" data-task="own-skill"><span><strong>Свой скилл</strong>Доработать один повторяемый рабочий сценарий.</span></label>
@@ -51,7 +51,7 @@
       <section class="track yellow">
         <div class="track-head"><div class="track-kicker">Раздел 2 · Ближайший приоритет</div><h2>Что нужно доизучить</h2><p>Сначала закрываем практические пробелы курса, которые сильнее всего влияют на самостоятельную и безопасную работу.</p></div>
         <div class="tasks">
-          <label class="task"><input type="checkbox" data-task="agent-safety"><span><strong>Безопасность агента</strong>Права доступа, границы действий, тестовые данные и подтверждения.</span></label>
+          <label class="task"><input type="checkbox" data-task="agent-safety" checked><span><strong>Безопасность агента — 87%</strong>Материал пройден, навык подтверждён: персональные данные исключаются, загрузка и отправка выполняются только после подтверждения.</span></label>
           <label class="task"><input type="checkbox" data-task="codex-app"><span><strong>Возможности приложения Codex</strong>Задачи, файлы, браузер, навыки и контроль результата.</span></label>
           <label class="task"><input type="checkbox" data-task="cowork"><span><strong>Cowork и работа с файлами</strong>Обработать папку документов и получить структурированный результат.</span></label>
           <label class="task"><input type="checkbox" data-task="git"><span><strong>Git на практике</strong>Сохранить один проект с понятной историей изменений.</span></label>
@@ -101,6 +101,11 @@
         saved.material=legacy;
       }
     }catch(e){}
+    saved.material['agent-safety']=true;
+    saved.material.planning=true;
+    saved.skill.planning=true;
+    saved.skill['agent-safety']=true;
+    saved.skill.browser=true;
     const save=()=>{const state={material:{},skill:{}};document.querySelectorAll('[data-material]').forEach(x=>state.material[x.dataset.material]=x.checked);document.querySelectorAll('[data-skill]').forEach(x=>state.skill[x.dataset.skill]=x.checked);try{localStorage.setItem(storageKey,JSON.stringify(state))}catch(e){}};
     document.querySelectorAll('[data-task]').forEach(materialBox=>{
       const key=materialBox.dataset.task;
@@ -114,7 +119,7 @@
       const materialText=document.createElement('span'); materialText.textContent='Материал пройден';
       materialLabel.append(materialBox,materialText);
       const skillBox=document.createElement('input'); skillBox.type='checkbox'; skillBox.dataset.skill=key;
-      skillBox.checked=Object.prototype.hasOwnProperty.call(saved.skill,key)?!!saved.skill[key]:key==='browser';
+      skillBox.checked=Object.prototype.hasOwnProperty.call(saved.skill,key)?!!saved.skill[key]:false;
       const skillLabel=document.createElement('label'); skillLabel.className='skill-mark';
       const skillText=document.createElement('span'); skillText.textContent='Навык проверен';
       skillLabel.append(skillBox,skillText);
@@ -126,3 +131,4 @@
   </script>
 </body>
 </html>
+
