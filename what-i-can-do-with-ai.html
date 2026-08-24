@@ -43,7 +43,7 @@
           <label class="task"><input type="checkbox" data-task="bot"><span><strong>Telegram-бот</strong>Запустить или улучшить учебного бота.</span></label>
           <label class="task"><input type="checkbox" data-task="browser" checked><span><strong>Браузер — подтверждено</strong>Chrome подключён, LMS открыт и просмотрен вместе с Codex.</span></label>
           <label class="task"><input type="checkbox" data-task="subagents" checked><span><strong>Субагенты — 93%</strong>Материал изучен, навык подтверждён: задачи разделены, результаты проверены и объединены.</span></label>
-          <label class="task"><input type="checkbox" data-task="memory"><span><strong>Контекст и память</strong>Сохранить состояние задачи так, чтобы продолжить после перерыва.</span></label>
+          <label class="task"><input type="checkbox" data-task="memory" checked><span><strong>Контекст и память — 89%</strong>Материал изучен, навык подтверждён: другой агент восстановил состояние проекта только по файлу status.md.</span></label>
           <label class="task"><input type="checkbox" data-task="design"><span><strong>Дизайн по референсу</strong>Собрать небольшой визуальный материал и сравнить с образцом.</span></label>
         </div>
       </section>
@@ -105,10 +105,12 @@
     saved.material.planning=true;
     saved.material['project-folder']=true;
     saved.material.subagents=true;
+    saved.material.memory=true;
     saved.skill.planning=true;
     saved.skill['agent-safety']=true;
     saved.skill['project-folder']=true;
     saved.skill.subagents=true;
+    saved.skill.memory=true;
     saved.skill.browser=true;
     const save=()=>{const state={material:{},skill:{}};document.querySelectorAll('[data-material]').forEach(x=>state.material[x.dataset.material]=x.checked);document.querySelectorAll('[data-skill]').forEach(x=>state.skill[x.dataset.skill]=x.checked);try{localStorage.setItem(storageKey,JSON.stringify(state))}catch(e){}};
     document.querySelectorAll('[data-task]').forEach(materialBox=>{
