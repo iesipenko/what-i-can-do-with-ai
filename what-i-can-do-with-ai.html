@@ -34,9 +34,9 @@
         <div class="tasks">
           <label class="task"><input type="checkbox" data-task="instructions"><span><strong>Кастомные инструкции</strong>Обновить инструкции и проверить их на рабочем запросе.</span></label>
           <label class="task"><input type="checkbox" data-task="project-folder" checked><span><strong>Агент и папка проекта — 78%</strong>Материал изучен, навык подтверждён: определены служебные файлы, источники, режимы доступа, черновик и порядок согласования результата.</span></label>
-          <label class="task"><input type="checkbox" data-task="external-context"><span><strong>Внешний контекст</strong>Получить проверяемый результат по документу или таблице.</span></label>
+          <label class="task"><input type="checkbox" data-task="external-context" checked><span><strong>Внешний контекст — 90%</strong>Материал пройден, навык подтверждён: два файла курса проанализированы, по ним подготовлена короткая проверяемая инструкция.</span></label>
           <label class="task"><input type="checkbox" data-task="planning" checked><span><strong>Планирование и постановка задачи — 89%</strong>Материал пройден, навык подтверждён: цель, источники, результат, критерии проверки и порядок подтверждений определены.</span></label>
-          <label class="task"><input type="checkbox" data-task="connectors"><span><strong>Коннекторы и внешние инструменты</strong>Сначала чтение или черновик; перед изменением данных — подтверждение.</span></label>
+          <label class="task"><input type="checkbox" data-task="connectors" checked><span><strong>Коннекторы и внешние действия — 90%</strong>Материал пройден, навык подтверждён: письмо показано перед отправкой, отправлено через Gmail только после подтверждения, получение проверено.</span></label>
           <label class="task"><input type="checkbox" data-task="skills"><span><strong>Готовые скиллы</strong>Применить подходящий скилл в реальной задаче и проверить результат.</span></label>
           <label class="task"><input type="checkbox" data-task="own-skill"><span><strong>Свой скилл</strong>Доработать один повторяемый рабочий сценарий.</span></label>
           <label class="task"><input type="checkbox" data-task="automation"><span><strong>Автоматизация</strong>Настроить повторяемую задачу и проверить её вручную.</span></label>
@@ -106,11 +106,15 @@
     saved.material['project-folder']=true;
     saved.material.subagents=true;
     saved.material.memory=true;
+    saved.material['external-context']=true;
+    saved.material.connectors=true;
     saved.skill.planning=true;
     saved.skill['agent-safety']=true;
     saved.skill['project-folder']=true;
     saved.skill.subagents=true;
     saved.skill.memory=true;
+    saved.skill['external-context']=true;
+    saved.skill.connectors=true;
     saved.skill.browser=true;
     const save=()=>{const state={material:{},skill:{}};document.querySelectorAll('[data-material]').forEach(x=>state.material[x.dataset.material]=x.checked);document.querySelectorAll('[data-skill]').forEach(x=>state.skill[x.dataset.skill]=x.checked);try{localStorage.setItem(storageKey,JSON.stringify(state))}catch(e){}};
     document.querySelectorAll('[data-task]').forEach(materialBox=>{
