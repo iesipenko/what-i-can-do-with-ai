@@ -65,7 +65,7 @@
       <section class="track violet">
         <div class="track-head"><div class="track-kicker">Раздел 3 · Персональные помощники</div><h2>Что освоить про ассистентов</h2><p>Цель — не изучить все инструменты, а запустить одного полезного помощника для регулярной задачи с понятными ограничениями.</p></div>
         <div class="tasks">
-          <label class="task"><input type="checkbox" data-task="assistant-model"><span><strong>Чат, агент, автоматизация, ассистент</strong>Понять различия и выбрать подходящий формат для задачи.</span></label>
+          <label class="task"><input type="checkbox" data-task="assistant-model" checked><span><strong>Проектирование простого ИИ-агента — 88%</strong>Материал изучен, навык подтверждён: спроектирован помощник по разбору почты с категориями, отчётом, минимальными доступами и обязательными подтверждениями важных действий.</span></label>
           <label class="task"><input type="checkbox" data-task="assistant-scenarios"><span><strong>Сценарии ассистента</strong>Выбрать одну частую задачу с измеримой пользой.</span></label>
           <label class="task"><input type="checkbox" data-task="hermes"><span><strong>Hermes</strong>Разобрать назначение, требования, сильные стороны и ограничения.</span></label>
           <label class="task"><input type="checkbox" data-task="openclaw"><span><strong>OpenClaw</strong>Изучить возможности и сравнить с Hermes на одном сценарии.</span></label>
@@ -108,6 +108,7 @@
     saved.material.memory=true;
     saved.material['external-context']=true;
     saved.material.connectors=true;
+    saved.material['assistant-model']=true;
     saved.skill.planning=true;
     saved.skill['agent-safety']=true;
     saved.skill['project-folder']=true;
@@ -115,6 +116,7 @@
     saved.skill.memory=true;
     saved.skill['external-context']=true;
     saved.skill.connectors=true;
+    saved.skill['assistant-model']=true;
     saved.skill.browser=true;
     const save=()=>{const state={material:{},skill:{}};document.querySelectorAll('[data-material]').forEach(x=>state.material[x.dataset.material]=x.checked);document.querySelectorAll('[data-skill]').forEach(x=>state.skill[x.dataset.skill]=x.checked);try{localStorage.setItem(storageKey,JSON.stringify(state))}catch(e){}};
     document.querySelectorAll('[data-task]').forEach(materialBox=>{
